@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — StageLink 🇲🇦</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇲🇦</text></svg>">
+</head>
+<body>
+
+<div class="dashboard">
+  <!-- Sidebar -->
+  <button class="mobile-toggle" id="sidebarToggle">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">Stage<span>Link</span> 🇲🇦</div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active"><span class="icon">🏠</span> Tableau de bord</a>
+      <a href="#"><span class="icon">🔍</span> <span id="navAction">Chercher un stage</span></a>
+      <a href="#"><span class="icon">📄</span> <span id="navDocs">Mes candidatures</span></a>
+      <a href="#"><span class="icon">💬</span> Messages</a>
+      <a href="#"><span class="icon">👤</span> Mon profil</a>
+      <a href="#"><span class="icon">⚙️</span> Paramètres</a>
+      <a href="index.html"><span class="icon">🏡</span> Retour au site</a>
+    </nav>
+    <div class="sidebar-footer">
+      <p>StageLink v1.0</p>
+      <p>© 2026 StageLink</p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1 id="dashGreeting">Bienvenue 👋</h1>
+        <p style="color:var(--gray);margin-top:4px;" id="dashSub">Voici votre tableau de bord</p>
+      </div>
+      <div style="display:flex;gap:12px;">
+        <a href="https://wa.me/212704726755" class="btn btn-green btn-sm" target="_blank">💬 WhatsApp</a>
+        <button class="btn btn-secondary btn-sm" id="logoutBtn">Déconnexion</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="dash-stats" id="dashStats">
+      <div class="dash-stat-card">
+        <div class="label" id="stat1Label">Candidatures</div>
+        <div class="value" id="stat1Value">12</div>
+        <div class="trend">↑ +3 cette semaine</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="label" id="stat2Label">Entretiens</div>
+        <div class="value" id="stat2Value">4</div>
+        <div class="trend">↑ +1 nouveau</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="label" id="stat3Label">Profil vu</div>
+        <div class="value" id="stat3Value">89</div>
+        <div class="trend">↑ +22 cette semaine</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="label" id="stat4Label">Matching</div>
+        <div class="value" id="stat4Value">96%</div>
+        <div class="trend">Excellent score</div>
+      </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="dash-content">
+      <div class="dash-card">
+        <h3 id="listTitle">Stages recommandés</h3>
+        <div id="stageList">
+          <div class="stage-item">
+            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&q=80" alt="">
+            <div class="info">
+              <h4>Stage Développeur Web</h4>
+              <p>TechCorp — Casablanca</p>
+            </div>
+            <span class="status status-new">Nouveau</span>
+          </div>
+          <div class="stage-item">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=100&q=80" alt="">
+            <div class="info">
+              <h4>Stage Marketing Digital</h4>
+              <p>MediaGroup — Rabat</p>
+            </div>
+            <span class="status status-active">En cours</span>
+          </div>
+          <div class="stage-item">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&q=80" alt="">
+            <div class="info">
+              <h4>Stage Finance</h4>
+              <p>BankPlus — Tanger</p>
+            </div>
+            <span class="status status-pending">En attente</span>
+          </div>
+          <div class="stage-item">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=100&q=80" alt="">
+            <div class="info">
+              <h4>Stage Data Analyst</h4>
+              <p>DataMaroc — Marrakech</p>
+            </div>
+            <span class="status status-new">Nouveau</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <h3>Activité récente</h3>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="padding:12px;background:var(--light);border-radius:var(--radius-sm);">
+            <p style="font-size:.85rem;font-weight:600;color:var(--navy);">✅ Profil complété à 90%</p>
+            <p style="font-size:.78rem;color:var(--gray);margin-top:4px;">Ajoutez vos compétences pour atteindre 100%</p>
+          </div>
+          <div style="padding:12px;background:var(--light);border-radius:var(--radius-sm);">
+            <p style="font-size:.85rem;font-weight:600;color:var(--navy);">📩 Nouveau message de TechCorp</p>
+            <p style="font-size:.78rem;color:var(--gray);margin-top:4px;">Il y a 2 heures</p>
+          </div>
+          <div style="padding:12px;background:var(--light);border-radius:var(--radius-sm);">
+            <p style="font-size:.85rem;font-weight:600;color:var(--navy);">🎯 3 nouveaux stages correspondent</p>
+            <p style="font-size:.78rem;color:var(--gray);margin-top:4px;">Basé sur votre profil et vos préférences</p>
+          </div>
+          <div style="padding:12px;background:var(--light);border-radius:var(--radius-sm);">
+            <p style="font-size:.85rem;font-weight:600;color:var(--navy);">📊 Votre CV a été vu 15 fois</p>
+            <p style="font-size:.78rem;color:var(--gray);margin-top:4px;">Cette semaine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<a href="https://wa.me/212704726755" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

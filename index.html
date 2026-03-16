@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StageLink — Trouve ton stage. Trouve ton talent. 🇲🇦</title>
+  <meta name="description" content="StageLink connecte les étudiants marocains aux meilleures opportunités de stage. +500 étudiants, +180 entreprises, 8 villes au Maroc.">
+  <link rel="canonical" href="https://stagelink.ma/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="StageLink — Trouve ton stage. Trouve ton talent. 🇲🇦">
+  <meta property="og:description" content="La 1ère plateforme de stages au Maroc. +500 étudiants, +180 entreprises, 8 villes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stagelink.ma/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80">
+  <meta property="og:locale" content="fr_MA">
+  <meta property="og:site_name" content="StageLink">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StageLink — Trouve ton stage. Trouve ton talent. 🇲🇦">
+  <meta name="twitter:description" content="La 1ère plateforme de stages au Maroc. +500 étudiants, +180 entreprises.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇲🇦</text></svg>">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StageLink",
+    "url": "https://stagelink.ma",
+    "description": "La 1ère plateforme de stages au Maroc.",
+    "inLanguage": "fr",
+    "publisher": {
+      "@type": "Organization",
+      "name": "StageLink",
+      "foundingDate": "2025",
+      "founder": [
+        {"@type": "Person", "name": "Arabi Hamza"},
+        {"@type": "Person", "name": "Bilal"},
+        {"@type": "Person", "name": "Chiheb"},
+        {"@type": "Person", "name": "Abdllatif Bazza"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">Stage<span>Link</span> 🇲🇦</a>
+    <div class="nav-links" id="navLinks">
+      <a href="etudiants.html">Étudiants</a>
+      <a href="entreprises.html">Entreprises</a>
+      <a href="villes.html">Villes</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#blog">Actualités</a>
+    </div>
+    <div class="nav-cta" id="navCta">
+      <a href="register.html" class="btn btn-secondary btn-sm">Se connecter</a>
+      <a href="register.html" class="btn btn-primary btn-sm">S'inscrire</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80" alt="Morocco cityscape" id="heroBg">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge reveal">🇲🇦 La 1ère plateforme de stages au Maroc</div>
+    <p class="arabic reveal">ربط الطلاب بالمقاولات المغربية</p>
+    <h1 class="reveal">Trouve ton <span class="highlight">stage.</span><br>Trouve ton <span class="highlight">talent.</span></h1>
+    <p class="tagline reveal">StageLink connecte les étudiants marocains aux entreprises qui façonnent l'avenir.</p>
+    <div class="hero-cards">
+      <a href="#etudiants" class="hero-card reveal">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=200&q=80" alt="Étudiants">
+        <h3>Étudiants</h3>
+        <p>Trouve ton stage idéal</p>
+      </a>
+      <a href="#entreprises" class="hero-card reveal">
+        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80" alt="Entreprises">
+        <h3>Entreprises</h3>
+        <p>Recrute un stagiaire</p>
+      </a>
+      <a href="#universites" class="hero-card reveal">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&q=80" alt="Universités">
+        <h3>Universités</h3>
+        <p>Guide tes étudiants</p>
+      </a>
+      <a href="#villes" class="hero-card reveal">
+        <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=200&q=80" alt="Villes du Maroc">
+        <h3>Villes</h3>
+        <p>8 villes au Maroc</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HERO ANIMATION: Card → Building ===== -->
+<section class="hero-anim" id="heroAnim">
+  <div class="hero-anim-scene">
+    <!-- Student Profile Card -->
+    <div class="flying-card" id="flyingCard">
+      <div class="fc-avatar">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Étudiant">
+      </div>
+      <div class="fc-info">
+        <h4>Hamza A.</h4>
+        <p>Développeur Web</p>
+        <span class="fc-tag">🎓 Étudiant</span>
+      </div>
+      <div class="fc-skills">
+        <span>React</span><span>Node.js</span><span>UI/UX</span>
+      </div>
+      <div class="fc-bar"><div class="fc-bar-fill"></div></div>
+      <p class="fc-match">Match 96%</p>
+    </div>
+    <!-- Company Building -->
+    <div class="building" id="building">
+      <div class="building-roof"></div>
+      <div class="building-body">
+        <div class="building-sign">TechCorp 🏢</div>
+        <div class="building-windows">
+          <div class="bw"></div><div class="bw lit"></div><div class="bw"></div>
+          <div class="bw lit"></div><div class="bw"></div><div class="bw lit"></div>
+          <div class="bw"></div><div class="bw lit"></div><div class="bw"></div>
+        </div>
+        <div class="building-door"></div>
+      </div>
+    </div>
+    <!-- Trail particles -->
+    <div class="trail-particles" id="trailParticles">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <p class="hero-anim-caption reveal">De ton profil à ton stage — en 48h ⚡</p>
+</section>
+
+<!-- ===== FLAG STRIP ===== -->
+<div class="flag-strip"></div>
+
+<!-- ===== STATS TICKER ===== -->
+<section class="stats-ticker">
+  <div class="ticker-track" id="ticker">
+    <div class="stat-item"><span class="num" data-target="500">+500</span> Étudiants</div>
+    <div class="stat-item"><span class="num" data-target="180">+180</span> Entreprises</div>
+    <div class="stat-item"><span class="num">48h</span> Matching</div>
+    <div class="stat-item"><span class="num">98%</span> Satisfaction</div>
+    <div class="stat-item"><span class="num">8</span> Villes</div>
+    <div class="stat-item"><span class="num" data-target="500">+500</span> Étudiants</div>
+    <div class="stat-item"><span class="num" data-target="180">+180</span> Entreprises</div>
+    <div class="stat-item"><span class="num">48h</span> Matching</div>
+    <div class="stat-item"><span class="num">98%</span> Satisfaction</div>
+    <div class="stat-item"><span class="num">8</span> Villes</div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== ÉTUDIANTS ===== -->
+<section class="audience-section" id="etudiants">
+  <div class="container">
+    <h2 class="section-title reveal">Étudiants — Trouve ton stage</h2>
+    <p class="section-sub reveal">Accède à des centaines d'offres de stages dans les meilleures entreprises marocaines.</p>
+    <div class="audience-grid">
+      <div class="audience-img reveal-left">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Étudiants marocains en stage">
+        <div class="img-badge">+500 Étudiants inscrits</div>
+      </div>
+      <div class="audience-text reveal-right">
+        <h2>Lance ta carrière dès maintenant</h2>
+        <p>StageLink te connecte aux entreprises qui cherchent des profils comme le tien. Crée ton profil, postule en un clic, et décroche ton stage en 48h.</p>
+        <ul class="audience-features">
+          <li>Matching intelligent avec les entreprises</li>
+          <li>CV builder intégré</li>
+          <li>Notifications en temps réel</li>
+          <li>Conseils et préparation d'entretien</li>
+        </ul>
+        <a href="register.html" class="btn btn-primary">Créer mon profil</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== ENTREPRISES ===== -->
+<section class="audience-section" id="entreprises">
+  <div class="container">
+    <h2 class="section-title reveal">Entreprises — Recrute un stagiaire</h2>
+    <p class="section-sub reveal">Trouvez les meilleurs talents universitaires du Maroc en quelques clics.</p>
+    <div class="audience-grid">
+      <div class="audience-text reveal-left">
+        <h2>Les meilleurs talents, à portée de main</h2>
+        <p>Publiez vos offres, filtrez les candidatures par compétences, et trouvez le stagiaire parfait pour votre équipe.</p>
+        <ul class="audience-features">
+          <li>Publication d'offres illimitée</li>
+          <li>Filtrage par compétences et ville</li>
+          <li>Tableau de bord de suivi</li>
+          <li>Marque employeur renforcée</li>
+        </ul>
+        <a href="register.html" class="btn btn-green">Publier une offre</a>
+      </div>
+      <div class="audience-img reveal-right">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Entreprise marocaine">
+        <div class="img-badge">+180 Entreprises partenaires</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== UNIVERSITÉS ===== -->
+<section class="audience-section" id="universites">
+  <div class="container">
+    <h2 class="section-title reveal">Universités — Guide tes étudiants</h2>
+    <p class="section-sub reveal">Suivez le parcours de vos étudiants et mesurez leur insertion professionnelle.</p>
+    <div class="audience-grid">
+      <div class="audience-img reveal-left">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" alt="Université marocaine">
+        <div class="img-badge">Partenaire académique</div>
+      </div>
+      <div class="audience-text reveal-right">
+        <h2>Un suivi complet de vos étudiants</h2>
+        <p>Accédez à des analytics sur le placement de vos étudiants, collaborez avec les entreprises, et améliorez votre taux d'insertion.</p>
+        <ul class="audience-features">
+          <li>Tableau de bord analytique</li>
+          <li>Suivi des conventions de stage</li>
+          <li>Réseau d'entreprises partenaires</li>
+          <li>Rapports d'insertion professionnelle</li>
+        </ul>
+        <a href="register.html" class="btn btn-primary">Devenir partenaire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== VILLES ===== -->
+<section class="audience-section" id="villes">
+  <div class="container">
+    <h2 class="section-title reveal">Villes — 8 villes au Maroc</h2>
+    <p class="section-sub reveal">StageLink est présent dans les grandes villes économiques du Maroc.</p>
+    <div class="audience-grid">
+      <div class="audience-text reveal-left">
+        <h2>Un réseau national</h2>
+        <p>De Casablanca à Tanger, de Rabat à Marrakech — StageLink couvre les pôles économiques majeurs du Royaume.</p>
+        <ul class="audience-features">
+          <li>Casablanca • Rabat • Tanger</li>
+          <li>Marrakech • Fès • Agadir</li>
+          <li>Oujda • Kénitra</li>
+          <li>Expansion continue dans d'autres villes</li>
+        </ul>
+        <a href="register.html" class="btn btn-green">Explorer les villes</a>
+      </div>
+      <div class="audience-img reveal-right">
+        <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80" alt="Ville marocaine">
+        <div class="img-badge">8 Villes couvertes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2 class="section-title reveal">Tarifs simples et transparents</h2>
+    <p class="section-sub reveal">Des formules adaptées à chaque profil. Commencez gratuitement.</p>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <h3>Étudiant Gratuit</h3>
+        <div class="price">0 <small style="font-size:1rem">MAD</small></div>
+        <div class="price-period">Pour toujours</div>
+        <div class="discount">GRATUIT</div>
+        <ul>
+          <li>Recherche de stages</li>
+          <li>Profil étudiant basique</li>
+          <li>3 candidatures / mois</li>
+          <li>Alertes email</li>
+        </ul>
+        <a href="register.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Commencer</a>
+      </div>
+      <div class="price-card popular reveal">
+        <h3>Étudiant Premium</h3>
+        <div class="price">29 <small style="font-size:1rem">MAD/stage</small></div>
+        <div class="price-period">Par stage postulé</div>
+        <div class="discount">-70% de réduction</div>
+        <ul>
+          <li>Candidatures illimitées</li>
+          <li>Profil mis en avant</li>
+          <li>CV builder avancé</li>
+          <li>Matching prioritaire</li>
+          <li>Préparation entretien</li>
+        </ul>
+        <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;">Choisir Premium</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Entreprise</h3>
+        <div class="price">49 <small style="font-size:1rem">MAD/mois</small></div>
+        <div class="price-period">Facturation mensuelle</div>
+        <div class="discount">-50% de réduction</div>
+        <ul>
+          <li>Offres illimitées</li>
+          <li>Filtrage avancé</li>
+          <li>Tableau de bord RH</li>
+          <li>Marque employeur</li>
+          <li>Support prioritaire</li>
+        </ul>
+        <a href="register.html" class="btn btn-green" style="width:100%;justify-content:center;">Essayer gratuitement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== BLOG ===== -->
+<section class="blog" id="blog">
+  <div class="container">
+    <h2 class="section-title reveal">Actualités & Conseils</h2>
+    <p class="section-sub reveal">Restez informé des dernières tendances du marché des stages au Maroc.</p>
+    <div class="blog-grid">
+      <article class="blog-card reveal">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Article stage">
+        <div class="blog-card-body">
+          <span class="tag">Conseils</span>
+          <h3>Comment décrocher un stage en 48h avec StageLink</h3>
+          <p>Découvrez nos astuces pour optimiser votre profil et attirer les recruteurs marocains.</p>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Article entreprise">
+        <div class="blog-card-body">
+          <span class="tag">Entreprises</span>
+          <h3>Les 10 entreprises qui recrutent le plus de stagiaires à Casa</h3>
+          <p>Le classement des entreprises les plus actives sur la plateforme StageLink.</p>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Article université">
+        <div class="blog-card-body">
+          <span class="tag">Tendances</span>
+          <h3>Stage 2026 : les secteurs qui explosent au Maroc</h3>
+          <p>Tech, finance, énergie verte — les domaines porteurs pour les stagiaires cette année.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="flag-strip"></div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Stage<span>Link</span> 🇲🇦</h3>
+        <p>La première plateforme marocaine qui connecte les étudiants aux entreprises pour des stages de qualité. Trouve ton stage. Trouve ton talent.</p>
+        <p style="direction:rtl;font-size:.9rem;opacity:.8;">ربط الطلاب بالمقاولات المغربية</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/212704726755" aria-label="WhatsApp">💬</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Plateforme</h4>
+        <a href="#etudiants">Étudiants</a>
+        <a href="#entreprises">Entreprises</a>
+        <a href="#universites">Universités</a>
+        <a href="#villes">Villes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="#blog">Blog</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#">FAQ</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="https://wa.me/212704726755">📱 +212 704 726 755</a>
+        <a href="mailto:contact@stagelink.ma">✉️ contact@stagelink.ma</a>
+        <a href="#">📍 Casablanca, Maroc</a>
+      </div>
+    </div>
+    <div class="flag-strip" style="margin-bottom:24px;"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StageLink. Tous droits réservés.</p>
+      <p class="footer-founders">Fondateurs : Arabi Hamza, Bilal, Chiheb, Abdllatif Bazza</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FAB ===== -->
+<a href="https://wa.me/212704726755" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

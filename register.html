@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription — StageLink 🇲🇦</title>
+  <meta name="description" content="Créez votre compte StageLink et commencez à trouver votre stage idéal au Maroc.">
+  <link rel="canonical" href="https://stagelink.ma/inscription">
+  <meta property="og:title" content="Inscription — StageLink 🇲🇦">
+  <meta property="og:description" content="Créez votre compte et trouvez votre stage idéal au Maroc.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stagelink.ma/inscription">
+  <meta property="og:locale" content="fr_MA">
+  <meta property="og:site_name" content="StageLink">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Inscription — StageLink 🇲🇦">
+  <meta name="twitter:description" content="Rejoignez +500 étudiants et +180 entreprises sur StageLink.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇲🇦</text></svg>">
+</head>
+<body>
+
+<div class="register-page">
+  <div class="register-container">
+    <a href="index.html" class="nav-logo" style="justify-content:center;margin-bottom:24px;color:var(--navy);">Stage<span>Link</span> 🇲🇦</a>
+    <h2>Créer un compte</h2>
+    <p class="sub">Rejoignez +500 étudiants et +180 entreprises</p>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-step active" id="ps1">1</div>
+      <div class="progress-line" id="pl1"></div>
+      <div class="progress-step" id="ps2">2</div>
+      <div class="progress-line" id="pl2"></div>
+      <div class="progress-step" id="ps3">3</div>
+    </div>
+
+    <form id="registerForm" autocomplete="off">
+
+      <!-- STEP 1: Choose Type -->
+      <div class="form-step active" id="step1">
+        <h3 style="text-align:center;color:var(--navy);margin-bottom:20px;font-size:1.1rem;">Vous êtes :</h3>
+        <div class="type-cards">
+          <div class="type-card" data-type="etudiant">
+            <div class="icon">🎓</div>
+            <h4>Étudiant</h4>
+            <p>Je cherche un stage</p>
+          </div>
+          <div class="type-card" data-type="entreprise">
+            <div class="icon">🏢</div>
+            <h4>Entreprise</h4>
+            <p>Je recrute des stagiaires</p>
+          </div>
+          <div class="type-card" data-type="universite">
+            <div class="icon">🏫</div>
+            <h4>Université</h4>
+            <p>Je guide mes étudiants</p>
+          </div>
+          <div class="type-card" data-type="ville">
+            <div class="icon">🏙️</div>
+            <h4>Partenaire Ville</h4>
+            <p>Je représente une ville</p>
+          </div>
+        </div>
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary" style="flex:1;justify-content:center;">Retour</a>
+          <button type="button" class="btn btn-primary" id="next1" disabled>Suivant →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Personal Info -->
+      <div class="form-step" id="step2">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Prénom</label>
+            <input type="text" id="fname" placeholder="Hamza" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Nom</label>
+            <input type="text" id="lname" placeholder="Arabi" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="hamza@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" placeholder="+212 6XX XXX XXX">
+        </div>
+        <div class="form-group">
+          <label for="city">Ville</label>
+          <select id="city">
+            <option value="">Choisir une ville</option>
+            <option>Casablanca</option>
+            <option>Rabat</option>
+            <option>Tanger</option>
+            <option>Marrakech</option>
+            <option>Fès</option>
+            <option>Agadir</option>
+            <option>Oujda</option>
+            <option>Kénitra</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="back2">← Retour</button>
+          <button type="button" class="btn btn-primary" id="next2">Suivant →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Preferences -->
+      <div class="form-step" id="step3">
+        <div class="form-group">
+          <label>Secteurs d'intérêt</label>
+          <div class="chip-group" id="sectors">
+            <span class="chip" data-val="tech">💻 Tech</span>
+            <span class="chip" data-val="finance">💰 Finance</span>
+            <span class="chip" data-val="marketing">📣 Marketing</span>
+            <span class="chip" data-val="design">🎨 Design</span>
+            <span class="chip" data-val="rh">👥 RH</span>
+            <span class="chip" data-val="energie">⚡ Énergie</span>
+            <span class="chip" data-val="sante">🏥 Santé</span>
+            <span class="chip" data-val="droit">⚖️ Droit</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="duration">Durée souhaitée</label>
+          <select id="duration">
+            <option value="">Choisir</option>
+            <option>1 mois</option>
+            <option>2 mois</option>
+            <option>3 mois</option>
+            <option>4-6 mois</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="start">Date de début</label>
+          <input type="month" id="start">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="back3">← Retour</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Créer mon compte 🚀</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script src="js/register.js"></script>
+</body>
+</html>
