@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Submit ---
   document.getElementById('registerForm').addEventListener('submit', e => {
     e.preventDefault();
+    
+    // Extract data from form
     const userData = {
       type: selectedType,
       fname: document.getElementById('fname').value.trim(),
@@ -73,7 +75,51 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: document.getElementById('duration').value,
       start: document.getElementById('start').value
     };
-    localStorage.setItem('stagelink_user', JSON.stringify(userData));
-    window.location.href = 'dashboard.html';
+
+    // --- Submit to Backend ---
+    const submitBtn = document.querySelector('.btn-primary[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    
+    // Set loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner"></span> Inscription en cours...';
+
+    const registrationData = {
+      email: userData.email,
+      password: 'password123', // Default password for now
+      role: userData.type,
+      first_name: userData.fname,
+      last_name: userData.lname,
+      phone: userData.phone,
+      city: userData.city,
+      education_level: userData.duration,
+      field_of_study: userData.sectors.join(', ')
+    };
+
+    fetch(`${API_URL}/auth/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(registrationData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        localStorage.setItem('stagelink_token', data.data.token);
+        localStorage.setItem('stagelink_user', JSON.stringify(data.data.user));
+        
+        alert('Inscription réussie ! Redirection vers votre tableau de bord...');
+        window.location.href = 'dashboard.html';
+      } else {
+        throw new Error(data.message || 'Erreur lors de l\'inscription');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Erreur: ' + error.message);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    });
   });
 });
